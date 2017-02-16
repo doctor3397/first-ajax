@@ -122,31 +122,31 @@ $(document).ready(function () {
 
   });
 
-
-  // POST AJAX Request
-  $("#add-monsters").click(function (){
-    // AJAX request
-    $.ajax({
-      crossDomain: false, // Same-origin policy, needed for dataType bc the monster api is not the same origin
-      //http://monsters-api.herokuapp.com/monsters/scare
-      url: 'http://monsters-api.herokuapp.com/monsters',
-      data: {
-        monster: {
-          name: 'Theresa',
-          home: 'Taiwan',
-          creepiness:30
-        }
-      },
-      method:'POST'
-      //.done() .fail()  .always()
-    }).done(function(data){
-      $('body').append("Susccess: monsters created");
-    }).fail(function(jqXHR, textStatus, errorThrown){
-      $('body').append("Error: could not create a monster");
-    }).always(function(){
-      $('body').append('Add operation complete');
-    });
-
-  });
+  //
+  // // POST AJAX Request
+  // $("#add-monsters").click(function (){
+  //   // AJAX request
+  //   $.ajax({
+  //     crossDomain: false, // Same-origin policy, needed for dataType bc the monster api is not the same origin
+  //     //http://monsters-api.herokuapp.com/monsters/scare
+  //     url: 'http://monsters-api.herokuapp.com/monsters',
+  //     data: {
+  //       monster: {
+  //         name: 'Theresa',
+  //         home: 'Taiwan',
+  //         creepiness:30
+  //       }
+  //     },
+  //     method:'POST'
+  //     //.done() .fail()  .always()
+  //   }).done(function(data){
+  //     $('body').append("Susccess: monsters created");
+  //   }).fail(function(jqXHR, textStatus, errorThrown){
+  //     $('body').append("Error: could not create a monster");
+  //   }).always(function(){
+  //     $('body').append('Add operation complete');
+  //   });
+  //
+  // });
 
 });
